@@ -1,0 +1,61 @@
+body,h1,h2,label,select,input,button{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lucida Sans';
+    background-color: seagreen;
+    color: white;
+    line-height: 2rem;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: aqua;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+header h1{
+    font-size: 35px;
+
+}
+.appointment-form{
+    background-color:cornflowerblue;
+    border: 2px solid slateblue;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    display: inline-block;
+    box-shadow: 0px 0px 5px black;
+    margin-left: 500px;
+    margin-top: 70px;
+}
+label{
+    display: block;
+    margin-bottom: 20px;
+}
+
+input,select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border:1px solid springgreen;
+    border-radius: 5px;
+}
+button{
+    background-color: dimgray;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0px;
+    margin-top: 50px;
+}
