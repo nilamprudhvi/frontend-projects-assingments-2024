@@ -1,0 +1,146 @@
+
+        
+      body{
+        background-color: rgba(8, 8, 8, 0.973);
+    
+     background-repeat: no-repeat; 
+     background-size: 1900px;    
+        height: 100%;
+        width: 100%;
+        color: white;
+      } 
+         nav{
+   
+   background-color: lightblue;
+   margin-left:-6px;
+   margin-top: -10px;
+   padding: 6px;
+   padding-top: 20px;
+ padding-bottom: 10px;
+ justify-content: center;
+ align-items: center;
+  } 
+  .nav2{
+  
+margin-left: 450px;
+    display: flex;
+    gap:60px;
+
+}
+a{
+    text-decoration: none;
+}
+.imgnav{
+   margin-left: 30px;
+    display: flex;
+    gap:30px;
+    
+   justify-content: center;
+   align-items: center;
+}
+.details1{
+    padding-left: 10px;
+    color: black;
+
+}
+.head1{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 30px;
+    font-size: larger;
+    padding-top: 8px;
+    text-transform: capitalize;
+  
+
+}
+    .label1{
+        font-size: 80px;
+        margin-top: 90px;
+        margin-left: 50px;
+        color: white;
+    }
+  .span1,.span2,.span3{
+       
+    color: white;
+        margin-top: 70px;
+        margin-left: 50px;
+        line-height: 20px;
+        
+    }
+   
+    .span1{
+        font-size: 25px;
+       
+    }
+
+    .span2{
+        font-size: larger;
+     
+       
+    }
+    .span3{
+        font-size: larger;
+        text-decoration: underline 2px solid white ;
+       
+       
+        
+    }
+.myform{
+    float: right;
+    margin-top: -370px;
+    margin-right: 60px;
+    line-height: 20px;
+ 
+}
+.label2{
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    
+}
+.required{
+    color:grey;
+}
+.list1{
+    color: white;
+    line-height: 35px;
+    
+}
+.submit{
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    float: right;
+    margin-right: -50px;
+    margin-top: 160px;
+    transition-duration: 1s;
+}
+.submit:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.4);
+    transition: 1s ;
+    
+
+}
+.submit:active{
+    color: blue;
+}
+
+footer{
+    background-color:black;
+    margin-top: 200px;
+    text-transform: capitalize;
+    color: white;
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(270px,3fr));
+width: 98%;
+text-transform: capitalize;
+font-family:'Lucida Sans';
+font-size: 15px;
+padding: 13px;
+margin-left: -5px;
+height: 13vh;
+  }
