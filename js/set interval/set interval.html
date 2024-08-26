@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>time:<span id="time1"></span></h4>
+    <script>
+        function myfunc(){
+            let d=new Date();
+            document.getElementById("time1").innerHTML=d.toLocaleTimeString();
+           
+        }
+        setInterval(myfunc,1000)
+        
+    </script>
+</body>
+</html>

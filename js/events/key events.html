@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type=" button" onclick="alert('hello')"> click me</button>
+    <button type="button" onclick=" myfunc()">  click</button>
+    <h1 id="head1" onmouseover="mouseover()">welcome </h1>
+    <button type="button" oncontextmenu="func()">hello world</button>
+    <button type="button" onkeydown="func1()">hola</button>
+    <button type="button" onkeyup="func2()">hables</button>
+<script>
+    function myfunc(){
+        alert('hello')
+    }
+    function mouseover(){
+        var x=document.getElementById("head1")
+         x.style.color="red";
+         x.style.backgroundColor="blue"
+    }
+
+    function func(){
+        alert('right')
+    }
+
+    function func1(){
+    alert(' down key')
+}
+function func2(){
+    alert(' up key')
+}
+
+</script>
+<h1 id="red">hello</h1>
+
+
+
+</body>
+</html>

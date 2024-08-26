@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1"> hello</button>
+
+    <script>
+        function first(){
+            alert('first')
+        }
+        function second(){
+            alert('second')
+        }
+        var btn=document.getElementById("btn1")
+        btn.addEventListener("click",first)
+        btn.addEventListener("click",second)
+        btn.removeEventListener("click",second)
+    </script>
+</body>
+</html>

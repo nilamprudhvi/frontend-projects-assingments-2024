@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="h12">
+    <h1 id="one"> welcome to india </h1>
+    <h1 id="two"> welcome to us </h1>
+</div>
+<img src="linked.png" alt="ff" id="one1">
+    <script>
+
+ var three= document.createElement("h2");
+ console.log( three)
+ three.innerText=" welcome to uk"
+ var new1 =document.getElementById("h12")
+ new1.appendChild(three)
+ console.log(new1.getAttribute("id"))
+var new2 =document.getElementById("two")
+three.insertBefore(new2)
+   
+var new3=document.getElementById("two")
+ new3.replaceChildren(three)
+
+ var new4=document.getElementById("two")
+ new4.remove()
+ var y=document.getElementById("one1")
+ console.log(y.getAttribute("src"))
+
+    </script>
+    
+</body>
+</html>
