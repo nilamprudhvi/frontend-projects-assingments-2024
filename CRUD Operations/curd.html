@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    
+    #employeeForm {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    
+   
+    #employeeForm input,
+    #employeeForm button {
+        display: block;
+        width: calc(100% - 22px);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+    
+    #employeeForm button {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #employeeForm button:hover {
+        background-color: #218838;
+    }
+    
+    #employeeList {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+    
+    #employeeList th,
+    #employeeList td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #employeeList tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    #employeeList button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    
+ 
+    
+    #employeeList button:nth-of-type(2) {
+        background-color: #dc3545;
+    }
+    
+  
+    </style>
+<body>
+    <form id="employeeForm">
+<input type="text" id="employeeName" placeholder="employee Name" required>
+<input type="text" id="employeeTitle" placeholder="employee Title" required>
+<button type="submit">Add employee</button>
+
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                  
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        <tbody id="employeeList">
+
+        </tbody>
+
+    </table>
+    <script>
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const employeeForm = document.getElementById("employeeForm");
+    const employeeName = document.getElementById("employeeName");
+    const employeeTitle = document.getElementById('employeeTitle');
+    const employeeList = document.getElementById("employeeList");
+
+    function loadEmployees() {
+        employeeList.innerHTML = '';
+        const employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+        employees.forEach((employee, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${employee.name}</td>
+                             <td>${employee.title}</td>
+                             <td>
+                                 <button onclick='editEmployee(${index})'>Edit</button>
+                                 <button onclick='deleteEmployee(${index})'>Delete</button>
+                             </td>`;
+            employeeList.appendChild(row);
+        });
+    }
+
+    employeeForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const newEmployeeName = employeeName.value.trim();
+        const newEmployeeTitle = employeeTitle.value.trim();
+        if (newEmployeeName !== "" && newEmployeeTitle !== "") {
+            const employees = JSON.parse(localStorage.getItem("employees")) || [];
+            const newEmployee = { name: newEmployeeName, title: newEmployeeTitle };
+            employees.push(newEmployee);
+            localStorage.setItem("employees", JSON.stringify(employees));
+            employeeName.value = "";
+            employeeTitle.value = "";
+            loadEmployees();
+        }
+    });
+
+    window.editEmployee = function(index) {
+        const employees = JSON.parse(localStorage.getItem("employees")) || [];
+        const employee = employees[index];
+        const updatedName = prompt("Edit Employee Name:", employee.name);
+        const updatedTitle = prompt("Edit Employee Title:", employee.title);
+        if (updatedName !== null && updatedTitle !== null) {
+            employee.name = updatedName;
+            employee.title = updatedTitle;
+            localStorage.setItem("employees", JSON.stringify(employees));
+            loadEmployees();
+        }
+    };
+
+    window.deleteEmployee = function(index) {
+        const employees = JSON.parse(localStorage.getItem("employees")) || [];
+        employees.splice(index, 1);
+        localStorage.setItem("employees", JSON.stringify(employees));
+        loadEmployees();
+    };
+
+    loadEmployees();
+});
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
