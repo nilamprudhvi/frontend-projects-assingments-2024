@@ -1,0 +1,24 @@
+
+
+body{
+    background-image:url(playlistbg.png);
+    background-repeat: no-repeat;
+    
+    background-size: 100%;
+     }
+     
+    form{
+        background-image:url(icon.gif);
+        
+    background-size:100%;
+    background-position:100%;
+        background-repeat: no-repeat;           
+width: 380px;
+margin: 150px 0px 0px 460px;
+padding: 25px;
+text-align: center;
+background-color:grey;
+font-size:medium;
+backface-visibility: calc(0.70);
+border-radius: 15px;
+    }
