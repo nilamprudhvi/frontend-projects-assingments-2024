@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            background-color: aquamarine;
+            width: 800px;
+            height: 500px;
+            display: flex;
+          /*  flex-direction: column;
+          justify-content: space-evenly;
+          align-items:center;  */
+         justify-content: center;
+         align-items: center;
+
+        }
+        .ch1{
+            width: 100px;
+            height: 100px;
+        }
+        #ch1{
+            background-color: aqua;
+        }
+        #ch2{
+            background-color: rgb(38, 0, 255);
+        }
+        #ch3{
+            background-color: rgb(247, 0, 255);
+        }
+        #ch4{
+            background-color: rgb(255, 102, 0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- parent
+    flex-diretion: row column row-reverse column-reverse
+    flex-wrap: no wrap wrap wrap-reverse
+    flex-flow: row wrap
+    justify-content: flex-start flex_end center space-around space-evenly
+    align-items:flex-start flex-end ,center
+    
+    child
+    flex-gr0w
+    -->
+
+    <div class="flex">
+        <div id="ch1" class="ch1">
+            ch1
+        </div>
+        <div  id="ch2" class="ch1">
+            ch1
+        </div>
+         <div id="ch3" class="ch1">
+            ch1
+        </div> 
+        <div id="ch4" class="ch1">
+            ch1
+        </div>
+
+    </div>
+</body>
+</html>
