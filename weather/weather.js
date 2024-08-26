@@ -15,22 +15,20 @@ fetch(url).then(res=>res.json())
 .then(data=>{
     
 console.log(data)
-   //
+ 
    let loc1 = document.getElementById("loc");
    const{name}=data
    loc1.innerHTML = name;
-   //
+
    const k=273
    let temp1 = document.getElementById("unit");
    temp1.innerHTML= Math.floor(data.main.temp-k)+"C";
   
    
-   //
-   
+
    let weather1= document.getElementById("weather");
 
    weather1.innerHTML='(data.weather[0].description)';
-   //
 
 })
 .catch(()=>{
