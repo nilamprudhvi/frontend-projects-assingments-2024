@@ -1,12 +1,21 @@
-<script>
-
-/*
-
-1)let celsius= 32
-
-let f= c*(9/5)+32
-
-console.log(f)
+1)function CF() {
+    var celsius=16
+    var f = (celsius * 9/5) + 32;
+    console.log(f)
+    
+}
+CF()
+2)function CN(num) {
+    if (num > 0) {
+        return 'The number is positive.';
+    } else if (num < 0) {
+        return 'The number is negative.';
+    } else {
+        return 'The number is zero.';
+    }
+   
+}
+console.log(CN())
 
 3)let str= "javascript"
 let sub= str.substring(0,3)
@@ -25,8 +34,7 @@ console.log(person.name)
 console.log(person.age)
 
 
-6)
-var days={
+6.const days = {
     day1:sunday,
     day2:monday,
     day3:tuesday,
@@ -34,44 +42,90 @@ var days={
     day5:thursday,
     day6:friday,
     day7:staturday
-}
+  };
 
-for( i in days){
+  while(days){
     
-    console.log(i[days])
+    console.log(days)
+    break
+  }
+     
+
+7.const nestedArray = [1, [2, [3, [4, 5]]]];
+function flattenArray(arr) {
+  while (arr.some(Array.isArray)) {
+    arr = [].concat.apply([], arr);
+  }
+  return arr;
 }
+const flattenedArray = flattenArray(nestedArray);
+
+console.log(flattenedArray);
+     
+     
 8)
 arr1=[1,2,3,4,5]
-var x=arr1.remove(0)
+var x=arr1.pop(0)
 console.log(x)
+     
 9)
- var arr2=[1,2,3,4,5,6]
+var arr2=[1,2,3,4,5,6]
 let y=arr2.includes(2)
-
 console.log(y)
-
-10)
-
-var x =document.createElement("p")
+10)var x =document.createElement("p")
 x.innerHTML="this is a new paragraph"
 container.appendChild(x)
 
-11)var x= document.getElementById("myElement")
-x.textContent="I was selected by ID."
-
-12)
- var car =true
-let z= prompt("enter your age :")
+11)
+var x= document.getElementById('my Element')
+x.textContent="I was selected by ID." 
+     
+ 12)    var car =true
+let age= prompt("enter your age :")
 if( age>16 && car){
 console.log(    "sathya is old enough to drive and has his own car." 
 )}
 else{
     console.log("not ")
 }
-*/
-let x=21
-if (y>x){
+
+13).var y=22
+if (21<y){
     console.log("Good Night")
+}
+ else{
+ "...."
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
 }
 else{
     ".........."
